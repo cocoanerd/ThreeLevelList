@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'ThreeLevelList_Example' do
+  pod 'ThreeLevelList', :path => '../'
+
+  target 'ThreeLevelList_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
