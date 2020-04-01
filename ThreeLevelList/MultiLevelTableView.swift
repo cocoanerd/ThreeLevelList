@@ -9,8 +9,13 @@ import UIKit
 
 let kMultiLevelBaseCellIdentifier = "kMultiLevelBaseCellIdentifier"
 
+public protocol ThreeLevelListDelegate: NSObjectProtocol {
+    func handleEvent(model: MultiLevelModel)
+}
+
 public class MultiLevelTableView: UITableView {
     
+    public weak var eventDelegate: ThreeLevelListDelegate?
     /// 背景色
     public var bgColor: UIColor = UIColor.white
     
@@ -43,6 +48,10 @@ extension MultiLevelTableView: UITableViewDelegate {
     
     public func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let currentModel = self.dataModel.totalData?[indexPath.row]
+        if currentModel?.needHandleEvent ?? false {
+            //doSomething
+            return
+        }
         switch currentModel?.currentLevel {
         case .frist:
             var indexPathArray: [IndexPath] = []
@@ -96,10 +105,7 @@ extension MultiLevelTableView: UITableViewDelegate {
     
     public func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         let model = self.dataModel.totalData?[indexPath.row]
-        if model!.isShow {
-            print("索引----:" , indexPath.row)
-        }
-        return (model?.isShow == true) ? 50: 0
+        return (model?.isShow == true) ? (model?.cellHeight ?? 50): 0
     }
     
 }

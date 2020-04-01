@@ -22,44 +22,44 @@ class ViewController: UIViewController {
     func filterData() {
         
         let array = [
-            ["descript": "商学院",
+            ["descript": "一级类目1",
              "secondLevelData":[
                 [
-                    "descript": "会计学",
+                    "descript": "二级类目1-1",
                     "thirdLevelData": [
                     [
-                        "descript": "会计学1班",
+                        "descript": "三级类目1-1-1",
                     ],
                     [
-                        "descript": "会计学1班"
+                        "descript": "三级类目1-1-2"
                     ]
                     ]
                 ],
                 [
-                    "descript": "人力资源管理",
+                    "descript": "二级类目1-2",
                     "thirdLevelData": [
                     [
-                        "descript": "人力资源管理1班",
+                        "descript": "三级级类目1-2-1",
                     ]
                     ]
                 ]
                 ]
             ],
-            ["descript": "计算机学院",
+            ["descript": "一级类目2",
              "secondLevelData":[
                 [
-                    "descript": "计算机科学",
+                    "descript": "二级类目2-1",
                     "thirdLevelData": [
                     ]
                 ],
                 [
-                    "descript": "软件工程",
+                    "descript": "二级类目2-2",
                     "thirdLevelData": [
                     [
-                        "descript": "软件工程1班",
+                        "descript": "三级类目2-2-1",
                     ],
                     [
-                        "descript": "软件工程1班"
+                        "descript": "三级类目2-2-2"
                     ]
                     ]
                 ]
@@ -75,18 +75,24 @@ class ViewController: UIViewController {
             fristModel.isShow = true
             fristModel.currentLevel = .frist
             fristModel.descript = frist["descript"] as? String;
+            let secondLevelData = frist["secondLevelData"] as! [[String: Any]]
+            if secondLevelData.isEmpty {
+                fristModel.needHandleEvent = true
+            }
             dataArray.append(fristModel)
             //二级
-            let secondLevelData = frist["secondLevelData"] as! [[String: Any]]
             for (j, second) in secondLevelData.enumerated(){
                 let secondModel = MultiLevelModel()
                 secondModel.fristIndex = i + 1
                 secondModel.secondIndex = j + 1
                 secondModel.currentLevel = .second
                 secondModel.descript = second["descript"] as? String
+                let thirdLevelData = second["thirdLevelData"] as! [[String: Any]]
+                if thirdLevelData.isEmpty {
+                    secondModel.needHandleEvent = true
+                }
                 dataArray.append(secondModel)
                 //三级
-                let thirdLevelData = second["thirdLevelData"] as! [[String: Any]]
                 for (k, third) in thirdLevelData.enumerated(){
                     let thirdModel = MultiLevelModel()
                     thirdModel.fristIndex = i + 1
@@ -94,6 +100,7 @@ class ViewController: UIViewController {
                     thirdModel.thirdIndex = k + 1
                     thirdModel.currentLevel = .third
                     thirdModel.descript = third["descript"] as? String
+                    thirdModel.needHandleEvent = true
                     dataArray.append(thirdModel)
                 }
             }
@@ -106,6 +113,7 @@ class ViewController: UIViewController {
         
         let view = MultiLevelTableView.init(frame: CGRect(x: 0, y: 88, width: UIScreen.main.bounds.size.width, height: UIScreen.main.bounds.size.height), style: UITableView.Style.plain)
         view.bgColor = UIColor.white
+        view.eventDelegate = self
         return view
     }()
     
@@ -114,5 +122,11 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
+}
+
+extension ViewController: ThreeLevelListDelegate {
+    func handleEvent(model: MultiLevelModel) {
+        
+    }
 }
 
