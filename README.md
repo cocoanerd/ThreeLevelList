@@ -30,3 +30,4 @@ ThreeLevelList is available under the MIT license. See the LICENSE file for more
 
 ## 效果
 
+![image](https://github.com/cocoanerd/ThreeLevelList/master/gif/QQ20200325-170824-HD.gif)
