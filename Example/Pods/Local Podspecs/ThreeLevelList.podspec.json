@@ -1,0 +1,24 @@
+{
+  "name": "ThreeLevelList",
+  "version": "0.1.0",
+  "summary": "三级列表ThreeLevelList.",
+  "description": "这是一个三级列表的pod库",
+  "homepage": "https://github.com/cocoanerd/ThreeLevelList",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "cocoanerd": "cocoanerd@163.com"
+  },
+  "source": {
+    "git": "https://github.com/cocoanerd/ThreeLevelList.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "8.0"
+  },
+  "swift_versions": "5.0",
+  "source_files": "ThreeLevelList/*.swift",
+  "swift_version": "5.0"
+}

@@ -1,0 +1,16 @@
+PODS:
+  - ThreeLevelList (0.1.0)
+
+DEPENDENCIES:
+  - ThreeLevelList (from `../`)
+
+EXTERNAL SOURCES:
+  ThreeLevelList:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  ThreeLevelList: f313a5ba1cd1a21e14297c73fdf4637ba1228c5a
+
+PODFILE CHECKSUM: 1a5001b2d51f28f6ee8a6258507a1dd2c9bd09b5
+
+COCOAPODS: 1.8.4

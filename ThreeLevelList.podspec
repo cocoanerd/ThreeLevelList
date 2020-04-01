@@ -9,7 +9,7 @@
 Pod::Spec.new do |s|
   s.name             = 'ThreeLevelList'
   s.version          = '0.1.0'
-  s.summary          = 'A short description of ThreeLevelList.'
+  s.summary          = '三级列表ThreeLevelList.'
 
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?
@@ -17,9 +17,7 @@ Pod::Spec.new do |s|
 #   * Write the description between the DESC delimiters below.
 #   * Finally, don't worry about the indent, CocoaPods strips it!
 
-  s.description      = <<-DESC
-TODO: Add long description of the pod here.
-                       DESC
+  s.description      = '这是一个三级列表的pod库'
 
   s.homepage         = 'https://github.com/cocoanerd/ThreeLevelList'
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
@@ -29,8 +27,10 @@ TODO: Add long description of the pod here.
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
   s.ios.deployment_target = '8.0'
+  
+  s.swift_version = '5.0'
 
-  s.source_files = 'ThreeLevelList/Classes/**/*'
+  s.source_files = 'ThreeLevelList/*.swift'
   
   # s.resource_bundles = {
   #   'ThreeLevelList' => ['ThreeLevelList/Assets/*.png']

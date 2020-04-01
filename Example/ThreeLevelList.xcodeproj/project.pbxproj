@@ -30,7 +30,7 @@
 /* Begin PBXFileReference section */
 		165D7603C593622351713210 /* Pods-ThreeLevelList_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ThreeLevelList_Example.release.xcconfig"; path = "Target Support Files/Pods-ThreeLevelList_Example/Pods-ThreeLevelList_Example.release.xcconfig"; sourceTree = "<group>"; };
 		4AC90E0F1168BF388F4D726F /* Pods_ThreeLevelList_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ThreeLevelList_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		5E326610EA12B30037A9A151 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		5E326610EA12B30037A9A151 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		607FACD01AFB9204008FA782 /* ThreeLevelList_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ThreeLevelList_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACD41AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACD51AFB9204008FA782 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -41,10 +41,10 @@
 		607FACE51AFB9204008FA782 /* ThreeLevelList_Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ThreeLevelList_Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACEA1AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACEB1AFB9204008FA782 /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
-		6C2CCF92762B56393872DF6D /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		6C2CCF92762B56393872DF6D /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		8B691348790738531B4A2976 /* Pods-ThreeLevelList_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ThreeLevelList_Tests.release.xcconfig"; path = "Target Support Files/Pods-ThreeLevelList_Tests/Pods-ThreeLevelList_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		92BDC5976ED8424F9B7FA398 /* Pods-ThreeLevelList_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ThreeLevelList_Example.debug.xcconfig"; path = "Target Support Files/Pods-ThreeLevelList_Example/Pods-ThreeLevelList_Example.debug.xcconfig"; sourceTree = "<group>"; };
-		A3BEE0FCBC3EE200AF2E1F26 /* ThreeLevelList.podspec */ = {isa = PBXFileReference; includeInIndex = 1; name = ThreeLevelList.podspec; path = ../ThreeLevelList.podspec; sourceTree = "<group>"; };
+		A3BEE0FCBC3EE200AF2E1F26 /* ThreeLevelList.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = ThreeLevelList.podspec; path = ../ThreeLevelList.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		AD76A866A6AFA360A5E16488 /* Pods-ThreeLevelList_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ThreeLevelList_Tests.debug.xcconfig"; path = "Target Support Files/Pods-ThreeLevelList_Tests/Pods-ThreeLevelList_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		E753BBFFF411C0BA66B9BC7D /* Pods_ThreeLevelList_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ThreeLevelList_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -156,7 +156,6 @@
 				AD76A866A6AFA360A5E16488 /* Pods-ThreeLevelList_Tests.debug.xcconfig */,
 				8B691348790738531B4A2976 /* Pods-ThreeLevelList_Tests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -213,10 +212,12 @@
 				TargetAttributes = {
 					607FACCF1AFB9204008FA782 = {
 						CreatedOnToolsVersion = 6.3.1;
+						DevelopmentTeam = S5ANSREG5D;
 						LastSwiftMigration = 0900;
 					};
 					607FACE41AFB9204008FA782 = {
 						CreatedOnToolsVersion = 6.3.1;
+						DevelopmentTeam = S5ANSREG5D;
 						LastSwiftMigration = 0900;
 						TestTargetID = 607FACCF1AFB9204008FA782;
 					};
@@ -227,6 +228,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -478,6 +480,7 @@
 			baseConfigurationReference = 92BDC5976ED8424F9B7FA398 /* Pods-ThreeLevelList_Example.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = S5ANSREG5D;
 				INFOPLIST_FILE = ThreeLevelList/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
@@ -493,6 +496,7 @@
 			baseConfigurationReference = 165D7603C593622351713210 /* Pods-ThreeLevelList_Example.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = S5ANSREG5D;
 				INFOPLIST_FILE = ThreeLevelList/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
@@ -507,6 +511,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = AD76A866A6AFA360A5E16488 /* Pods-ThreeLevelList_Tests.debug.xcconfig */;
 			buildSettings = {
+				DEVELOPMENT_TEAM = S5ANSREG5D;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -529,6 +534,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 8B691348790738531B4A2976 /* Pods-ThreeLevelList_Tests.release.xcconfig */;
 			buildSettings = {
+				DEVELOPMENT_TEAM = S5ANSREG5D;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
 					"$(inherited)",

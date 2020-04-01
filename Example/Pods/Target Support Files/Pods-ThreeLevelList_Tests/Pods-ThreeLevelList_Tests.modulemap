@@ -1,0 +1,6 @@
+framework module Pods_ThreeLevelList_Tests {
+  umbrella header "Pods-ThreeLevelList_Tests-umbrella.h"
+
+  export *
+  module * { export * }
+}
