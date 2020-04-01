@@ -20,18 +20,14 @@ class MultiLevelBaseCell: UITableViewCell {
     }
     
     func bindCell(model: MultiLevelModel) {
-        var depict: String = ""
         if (model.currentLevel == .frist) {
-            depict = "① - " + (model.descript ?? "")
             self.backgroundColor = UIColor(red: 212/255.0, green: 226/255.0, blue: 208/255.0, alpha: 1)
         } else if (model.currentLevel == .second) {
-            depict = "    ② - " + (model.descript ?? "")
             self.backgroundColor = UIColor(red: 212/255.0, green: 201/255.0, blue: 194/255.0, alpha: 1)
         } else if (model.currentLevel == .third){
-            depict = "        ③ - " + (model.descript ?? "")
             self.backgroundColor = UIColor(red: 212/255.0, green: 177/255.0, blue: 175/255.0, alpha: 1)
         }
-        contentLabel.text = (model.isShow == true) ? depict : ""
+        contentLabel.text = (model.isShow == true) ? (model.descript ?? "") : ""
     }
     
     fileprivate func buildUI() {
