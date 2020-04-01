@@ -126,7 +126,12 @@ class ViewController: UIViewController {
 
 extension ViewController: ThreeLevelListDelegate {
     func handleEvent(model: MultiLevelModel) {
-        
+        let alertController = UIAlertController.init(title: "我来处理代理事件", message: "开心吗", preferredStyle: .alert)
+        let action = UIAlertAction.init(title: "让我消失吧", style: .cancel) { (action) in
+            
+        }
+        alertController.addAction(action)
+        self.navigationController?.present(alertController, animated: true, completion: nil)
     }
 }
 

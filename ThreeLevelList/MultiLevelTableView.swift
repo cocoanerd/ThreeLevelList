@@ -49,7 +49,7 @@ extension MultiLevelTableView: UITableViewDelegate {
     public func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let currentModel = self.dataModel.totalData?[indexPath.row]
         if currentModel?.needHandleEvent ?? false {
-            //doSomething
+            self.eventDelegate?.handleEvent(model: currentModel ?? MultiLevelModel())
             return
         }
         switch currentModel?.currentLevel {
